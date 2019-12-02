@@ -6,6 +6,7 @@
 import matplotlib.pyplot as plt
 from celluloid import Camera
 from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.animation import FFMpegWriter
 
 ######################################################################
 # Take a set of arrays that characterize the gravitational evolution
@@ -52,7 +53,7 @@ def movie(t,body1,body2,body3,labels=[],Edat=[],Elabels=[],color='black',tail=0,
         return
 
     # set up the plot structure
-    fig = plt.figure()
+    fig = plt.figure(figsize=(10,10))
     ax = fig.add_subplot(111, projection='3d')
     camera = Camera(fig)
     ax.set_ylabel('y')
