@@ -4,9 +4,10 @@
 ######################################################################
 
 import matplotlib.pyplot as plt
+
 from celluloid import Camera
-from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.animation import FFMpegWriter
+from mpl_toolkits.mplot3d import Axes3D
 
 ######################################################################
 # Take a set of arrays that characterize the gravitational evolution
@@ -49,7 +50,7 @@ def movie(t,body1,body2,body3,labels=[],Edat=[],Elabels=[],color='black',tail=0,
         z2 = body2[2]
         z3 = body3[2]
     else:
-        print('ERROR: length of dat array is not recognized')
+        print('ERROR: length of data array is not recognized')
         return
 
     # set up the plot structure
