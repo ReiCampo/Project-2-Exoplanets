@@ -35,9 +35,9 @@ def plotter(result, x,y,z, pos3,proj=3, tarr=[], point='n'):
     if proj==0: #plots initial positions
         fig = plt.figure(figsize=(7,7))
         ax = fig.add_subplot(111)
-        ax.set_xlabel('x')
-        ax.set_ylabel('y')
-        ax.set_title('Initial Positions, initial position of body 3=%.5f'%(pos3))
+        ax.set_xlabel('x (AU)')
+        ax.set_ylabel('y (AU)')
+        ax.set_title('Initial Positions')
         if x==1:
             ax.plot(x1[0],y1[0], 'ro', label="Star 1", markersize=10)
         if y==1:
@@ -48,9 +48,9 @@ def plotter(result, x,y,z, pos3,proj=3, tarr=[], point='n'):
     if proj==2 and point=='n': #creates a 2D plot
         fig = plt.figure(figsize=(7,7))
         ax = fig.add_subplot(111)        
-        ax.set_xlabel('x')
-        ax.set_ylabel('y')
-        ax.set_title('Motion of Bodies, initial position of body 3=%.5f'%(pos3))
+        ax.set_xlabel('x (AU)')
+        ax.set_ylabel('y (AU)')
+        ax.set_title('Motion of Bodies')
         if x==1:
             ax.plot(x1,y1, 'r', label="Star 1")
         if y==1:
@@ -61,9 +61,9 @@ def plotter(result, x,y,z, pos3,proj=3, tarr=[], point='n'):
     if proj==2 and point=='y': #creates a 2D plot and makes points for stars
         fig = plt.figure(figsize=(7,7))
         ax = fig.add_subplot(111)        
-        ax.set_xlabel('x')
-        ax.set_ylabel('y')
-        ax.set_title('Motion of Bodies, initial position of body 3=%.5f'%(pos3))
+        ax.set_xlabel('x (AU)')
+        ax.set_ylabel('y (AU)')
+        ax.set_title('Motion of Bodies')
         if x==1:
             ax.plot(x1,y1, 'ro', label="Star 1", markersize=10)
         if y==1:
@@ -74,10 +74,10 @@ def plotter(result, x,y,z, pos3,proj=3, tarr=[], point='n'):
     if proj==3: #creates a 3D plot
         fig = plt.figure(figsize=(7,7))
         ax = fig.add_subplot(111, projection='3d')
-        ax.set_xlabel('x')
-        ax.set_ylabel('y')
-        ax.set_zlabel('z')
-        ax.set_title('Motion of Bodies, initial position of body 3=%.5f'%(pos3))
+        ax.set_xlabel('x (AU)')
+        ax.set_ylabel('y (AU)')
+        ax.set_zlabel('z (AU)')
+        ax.set_title('Motion of Bodies')
         if x==1:
             ax.plot(x1,y1,z1, 'b', label="Star 1")
         if y==1:
@@ -88,9 +88,9 @@ def plotter(result, x,y,z, pos3,proj=3, tarr=[], point='n'):
     if proj==4: #shows a velocity component of 1 body versus time
         fig = plt.figure(figsize=(7,7))
         ax = fig.add_subplot(111)
-        ax.set_xlabel('time')
-        ax.set_ylabel('velocity')
-        ax.set_title('Velocity of Planet, initial position of body 3=%.5f'%(pos3))
+        ax.set_xlabel('Time (Years)')
+        ax.set_ylabel('Velocity (AU/Year)')
+        ax.set_title('Velocity of Planet')
         if x==1:
             ax.plot(tarr, vx2, 'k', label="Planet")
     
